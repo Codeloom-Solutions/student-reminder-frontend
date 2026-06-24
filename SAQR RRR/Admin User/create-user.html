@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User - SAQR Portal</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Admin</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item active"><a href="manage-lecturers.html"><i class="fa-solid fa-chalkboard-user"></i> <span>Manage Lecturers</span></a></li>
+                <li class="sidebar-item active"><a href="manage-students.html"><i class="fa-solid fa-user-graduate"></i> <span>Manage Students</span></a></li>
+                <li class="sidebar-item"><a href="manage-subject.html"><i class="fa-solid fa-book"></i> <span>Manage Subject</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+                <li class="sidebar-item"><a href="system-logs.html"><i class="fa-solid fa-terminal"></i> <span>System Logs</span></a></li>
+                <li class="sidebar-item"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> <span>Reports</span></a></li>
+                <li class="sidebar-item"><a href="export.html"><i class="fa-solid fa-file-export"></i> <span>Export Data</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Admin: create user</h1>
+
+            <div class="profile-card-base" style="background-color: var(--accent-slate);">
+                <form class="profile-form-body" method="POST" action="">
+                    <div class="profile-input-block">
+                        <label class="form-label-text">Full name</label>
+                        <input type="text" class="input-element" name="new-user-fullname" value="">
+                    </div>
+                    <div class="profile-input-block">
+                        <label class="form-label-text">Email</label>
+                        <input type="email" class="input-element" name="new-user-email" value="">
+                    </div>
+                    <div class="profile-input-block">
+                        <label class="form-label-text">Portal ID number</label>
+                        <input type="text" class="input-element" name="new-user-portal-id" value="">
+                    </div>
+                    <div class="profile-input-block">
+                        <label class="form-label-text">Role</label>
+                        <select class="input-element" name="new-user-role">
+                            <option value="" disabled selected hidden></option>
+                            <option value="student">Student</option>
+                            <option value="lecturer">Lecturer</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-action-row">
+                        <button type="reset" class="capsule-btn-dark">Reset</button>
+                        <button type="submit" class="capsule-btn-dark">Create</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+<script src="../assets/js/admin-handler.js"></script>
+</body>
+</html>

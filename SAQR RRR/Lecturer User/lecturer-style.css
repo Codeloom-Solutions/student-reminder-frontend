@@ -1,0 +1,749 @@
+/* ==========================================
+   SAQR Lecturer Portal - Master Stylesheet
+   ========================================== */
+
+:root {
+    --primary-navy: #041E42;
+    --sidebar-bg: #00204a;
+    --accent-slate: #9fb1cc;
+    --system-gray: #d9d9d9;
+    --bg-light: #f5f5f5;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Global Portal Layout Structure --- */
+.top-navbar {
+    height: 70px;
+    background-color: var(--primary-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo-area img {
+    height: 45px;
+    display: block;
+}
+
+.top-nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-light);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-icon:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.profile-trigger:hover {
+    opacity: 0.8;
+}
+
+.main-container {
+    display: flex;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    width: 100%;
+}
+
+/* --- Persistent Left Sidebar --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 20px 0;
+}
+
+.user-tag {
+    background-color: var(--system-gray);
+    padding: 12px 20px;
+    margin: 0 15px 20px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-tag-info h4 {
+    font-size: 0.85rem;
+    color: #000;
+}
+
+.user-tag-info p {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.sidebar-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+.sidebar-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #b0c4de;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Individual Responsive Hover Effect */
+.sidebar-item a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+}
+
+/* Isolated Distinct Active State Layout Rule */
+.sidebar-item.active a {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--text-light);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* --- Main Fluid Dashboard Workspace --- */
+.workspace {
+    flex: 1;
+    margin-left: 260px;
+    padding: 40px;
+    background-color: var(--white);
+    width: calc(100% - 260px);
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+/* --- Metrics Grid Rows --- */
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.metric-card {
+    background-color: var(--sidebar-bg);
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: var(--text-light);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.metric-pill {
+    background-color: var(--accent-slate);
+    color: var(--text-dark);
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 30px;
+    width: 65%;
+    margin: 0 auto 5px auto;
+}
+
+/* --- Dashboard Sub-sections --- */
+.section-headline {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dashboard-split-panes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.pane-container {
+    background-color: var(--system-gray);
+    border: 1px solid #bcbcbc;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.pane-container h3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pane-card-strip {
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* --- Create Task Split Windows --- */
+.split-view-container {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 30px;
+}
+
+.split-divider {
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+}
+
+.form-window-card {
+    background-color: var(--accent-slate);
+    border-radius: 24px;
+    padding: 25px;
+}
+
+.form-window-card h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.form-group-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-label-text {
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.input-element {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    font-size: 1rem;
+    background-color: var(--white);
+}
+
+select.input-element {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M0 3l5 5 5-5z' fill='%23333'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.form-action-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.capsule-btn-dark {
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+.capsule-btn-dark:hover {
+    filter: brightness(1.2);
+}
+
+.capsule-btn-dark:active {
+    transform: scale(0.98);
+}
+
+/* --- Data Grid Lists: Manage Task View --- */
+.list-search-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.data-list-wrapper {
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.data-list-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1fr;
+    background-color: var(--system-gray);
+    padding: 12px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-dark);
+    font-size: 0.95rem;
+}
+
+.data-list-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1fr;
+    padding: 16px 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.action-icon-group {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.action-icon-group i:hover {
+    color: var(--sidebar-bg);
+}
+
+.float-right-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.btn-add-action {
+    background-color: var(--system-gray);
+    color: var(--text-dark);
+    border: 1px solid var(--border-dark);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, filter 0.2s ease;
+}
+
+.btn-add-action:hover {
+    filter: brightness(0.9);
+}
+
+/* --- Identity Record Configurations --- */
+.profile-card-base {
+    background-color: var(--system-gray);
+    border-radius: 24px;
+    padding: 35px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.profile-identity-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-meta-details h2 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+
+.profile-form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-input-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile-input-block label {
+    font-weight: bold;
+}
+
+.profile-control-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 1rem;
+}
+
+/* --- System Configuration Toggles --- */
+.config-header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.config-header-row h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.config-form-interior {
+    background-color: #a6b7cf;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.config-row-split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+}
+
+.config-row-split label {
+    font-weight: bold;
+}
+
+.config-section-divider {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+}
+
+.toggle-setting-card {
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Switch UI Mechanism --- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #000000; }
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* --- Responsive Layout Configurations --- */
+@media (max-width: 1024px) {
+    .split-view-container { grid-template-columns: 1fr; }
+    .split-divider { display: none; }
+    .metrics-row { grid-template-columns: 1fr; gap: 15px; }
+    .dashboard-split-panes { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .sidebar { width: 70px; }
+    .sidebar .user-tag, .sidebar-item span { display: none; }
+    .workspace { margin-left: 70px; width: calc(100% - 70px); }
+}
+
+/* ==========================================================
+   SAQR Lecturer Portal - Settings Page Interactive Additions
+   ========================================================== */
+
+/* Individual Option Cards Hover Responsiveness */
+.toggle-setting-card {
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Individual shading change when mouse hovers exactly over this card block */
+.toggle-setting-card:hover {
+    background-color: #fafdff; /* Crisp, clean light tint */
+    transform: translateY(-1px); /* Micro-lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* Soft elevation shadow */
+}
+
+/* Enhancing the Switch Mechanism Hover Feedback */
+.switch:hover .slider {
+    background-color: #b3b3b3; /* Slightly darker shade when hovering over unselected slider */
+}
+
+.switch:hover input:checked + .slider {
+    background-color: #222222; /* Darker focus feedback when hovering over an active switch */
+}
+
+/* Configuration Inner Row Smooth Interaction */
+.config-row-split {
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.config-row-split:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Soft, adaptive highlight over background fill */
+}
+
+/* ==========================================================
+   SAQR Lecturer Portal - UI Enhancement Block create-task
+   ========================================================== */
+
+/* Modern Design Token Overrides */
+:root {
+    --bg-light: #f8fafc;
+    --border-subtle: #e2e8f0;
+    --shadow-modern-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-modern-md: 0 10px 30px -5px rgba(0,0,0,0.05), 0 5px 15px -5px rgba(0,0,0,0.03);
+    --radius-modern: 16px;
+    --radius-input: 10px;
+    --primary-interactive: #2563eb;
+}
+
+/* Base Body Update for Modern Typography Rendering */
+body {
+    background-color: var(--bg-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Workspace Canvas Refresher */
+.workspace {
+    background-color: transparent;
+    padding: 40px 50px;
+}
+
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    margin-bottom: 35px;
+}
+
+/* Grid & Layout - Dropping the explicit physical line */
+.split-view-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.split-divider {
+    display: none; /* Safely kills the 1px center column divider visually */
+}
+
+/* Floating Clean Cards Transformation */
+.form-window-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-modern);
+    padding: 35px;
+    box-shadow: var(--shadow-modern-md);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-window-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+}
+
+.form-window-card h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 14px;
+}
+
+/* Modern Form & Input Overrides */
+.form-group-stack {
+    gap: 20px;
+}
+
+.form-label-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-element {
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius-input);
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #ffffff;
+    box-shadow: var(--shadow-modern-sm);
+    transition: all 0.2s ease-in-out;
+}
+
+.input-element::placeholder {
+    color: #94a3b8;
+}
+
+.input-element:focus {
+    outline: none;
+    border-color: var(--primary-navy);
+    box-shadow: 0 0 0 4px rgba(4, 30, 66, 0.12);
+    background-color: #ffffff;
+}
+
+/* Dynamic handling for updated multi-line inputs */
+.textarea-element {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Native Dropdowns Modernization Override */
+select.input-element {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-size: 14px;
+    background-position: right 16px center;
+}
+
+/* Contextual Button Hierarchy Restructuring */
+.form-action-row {
+    margin-top: 35px;
+    gap: 16px;
+}
+
+.capsule-btn-dark {
+    padding: 12px 28px;
+    border-radius: var(--radius-input);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    text-align: center;
+}
+
+/* Secondary Button (Reset Style) */
+.capsule-btn-dark.btn-secondary {
+    background-color: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}
+
+.capsule-btn-dark.btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    filter: none;
+}
+
+/* Primary Button (Create Action Style) */
+.capsule-btn-dark.btn-primary {
+    background-color: var(--primary-navy);
+    color: var(--text-light);
+    box-shadow: 0 4px 12px rgba(4, 30, 66, 0.15);
+}
+
+.capsule-btn-dark.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(4, 30, 66, 0.25);
+    filter: brightness(1.15);
+}
+
+.capsule-btn-dark:active {
+    transform: translateY(1px);
+}
+
+/* Responsive Structural Fixes */
+@media (max-width: 1150px) {
+    .split-view-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

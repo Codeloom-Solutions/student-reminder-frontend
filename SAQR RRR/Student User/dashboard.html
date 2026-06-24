@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SAQR Portal</title>
+    <link rel="stylesheet" href="student-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area">
+            <img src="../assets/images/logo.webp" alt="SAQR University School Portal">
+        </div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger">
+                <i class="fa-regular fa-circle-user fa-xl"></i>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info">
+                    <h4>user:</h4>
+                    <p>Student</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="tasks.html"><i class="fa-solid fa-briefcase"></i> <span>Tasks</span></a></li>
+                <li class="sidebar-item"><a href="courses.html"><i class="fa-solid fa-book-open"></i> <span>Subjects</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Logout</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Welcome, Student!</h1>
+            
+            <section class="metrics-row">
+                <div class="metric-card active-tab">
+                    <h3>Total Tasks</h3>
+                    <div class="metric-value" id="metric-total-tasks"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Assignments</h3>
+                    <div class="metric-value" id="metric-total-assignments"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Quizzes</h3>
+                    <div class="metric-value" id="metric-total-quizzes"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Subjects</h3>
+                    <div class="metric-value" id="metric-total-subjects"></div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="placeholder-list">
+                    <div class="dashboard-pane">
+                        <h3>Recent Notification:</h3>
+                        <div class="placeholder-list">
+                            <div class="placeholder-strip"></div>
+                            <div class="placeholder-strip"></div>
+                            <div class="placeholder-strip"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-pane" style="margin-top: 20px;">
+                        <h3>Pending Assignments:</h3>
+                        <div class="placeholder-list">
+                            <div class="placeholder-strip"></div>
+                            <div class="placeholder-strip"></div>
+                            <div class="placeholder-strip"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="quick-actions-panel">
+                    <h3 style="margin-bottom: 5px;">Quick Actions:</h3>
+                    <a href="tasks.html" class="action-btn">View Tasks</a>
+                    
+                    <a href="courses.html" class="action-btn">View Subjects</a>
+                  
+                    
+                </aside>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/student-dashboard.js"></script>
+</body>
+</html>

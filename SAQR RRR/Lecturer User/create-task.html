@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task - SAQR Portal</title>
+    <link rel="stylesheet" href="lecturer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Lecturer</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item active"><a href="create-task.html"><i class="fa-solid fa-pen-to-square"></i> <span>Create Task</span></a></li>
+                <li class="sidebar-item"><a href="manage-task.html"><i class="fa-solid fa-list-check"></i> <span>Manage Task</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Create Task</h1>
+
+            <div class="split-view-container">
+                <form class="form-window-card" method="POST" action="">
+                    <h2>Create Quiz</h2>
+                    <div class="form-group-stack">
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Subject</label>
+                            <select class="input-element" name="quiz-subject">
+                                <option value="" disabled selected hidden>Select a subject...</option>
+                            </select>
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Title</label>
+                            <input type="text" class="input-element" name="quiz-title" placeholder="e.g., Midterm Pop Quiz">
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Instructions</label>
+                            <textarea class="input-element textarea-element" name="quiz-instructions" rows="3" placeholder="Provide instructions for the students..."></textarea>
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Due date & time</label>
+                            <input type="datetime-local" class="input-element" name="quiz-duedate">
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Duration (minutes)</label>
+                            <input type="text" class="input-element" name="quiz-duration" placeholder="e.g., 45">
+                        </div>
+                    </div>
+                    <div class="form-action-row">
+                        <button type="reset" class="capsule-btn-dark btn-secondary">Reset</button>
+                        <button type="submit" class="capsule-btn-dark btn-primary">Create Quiz</button>
+                    </div>
+                </form>
+
+                <form class="form-window-card" method="POST" action="">
+                    <h2>Create Assignment</h2>
+                    <div class="form-group-stack">
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Subject</label>
+                            <select class="input-element" name="assignment-subject">
+                                <option value="" disabled selected hidden>Select a subject...</option>
+                            </select>
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Title</label>
+                            <input type="text" class="input-element" name="assignment-title" placeholder="e.g., Research Paper Draft">
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Description</label>
+                            <textarea class="input-element textarea-element" name="assignment-description" rows="3" placeholder="Describe the assignment expectations..."></textarea>
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Due date & time</label>
+                            <input type="datetime-local" class="input-element" name="assignment-duedate">
+                        </div>
+                        <div class="profile-input-block">
+                            <label class="form-label-text">Priority</label>
+                            <select class="input-element" name="assignment-priority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-action-row">
+                        <button type="reset" class="capsule-btn-dark btn-secondary">Reset</button>
+                        <button type="submit" class="capsule-btn-dark btn-primary">Create Assignment</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+<script src="../assets/js/lecturer-handler.js"></script>
+<script src="../assets/js/lecturer-handler2.js"></script>
+</body>
+</html>

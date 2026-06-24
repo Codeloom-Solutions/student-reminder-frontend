@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Dashboard - SAQR Portal</title>
+    <link rel="stylesheet" href="lecturer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger">
+                <i class="fa-regular fa-circle-user fa-xl"></i>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info">
+                    <h4>user:</h4>
+                    <p>Lecturer</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="create-task.html"><i class="fa-solid fa-pen-to-square"></i> <span>Create Task</span></a></li>
+                <li class="sidebar-item"><a href="manage-task.html"><i class="fa-solid fa-list-check"></i> <span>Manage Task</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Lecturer Dashboard</h1>
+
+            <section class="metrics-row">
+                <div class="metric-card">
+                    <h3>Total subjects</h3>
+                    <div class="metric-pill" id="metric-subjects"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Total assignments</h3>
+                    <div class="metric-pill" id="metric-assignments"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Total quizzes</h3>
+                    <div class="metric-pill" id="metric-quizzes"></div>
+                </div>
+            </section>
+
+            <h2 class="section-headline">Statistics</h2>
+
+            <div class="dashboard-split-panes">
+                <div class="pane-container">
+                    <h3>Recent activities</h3>
+                    <div id="recent-activities-target">
+                        </div>
+                </div>
+                <div class="pane-container">
+                    <h3>Notifications</h3>
+                    <div id="notifications-summary-target">
+                        </div>
+                </div>
+            </div>
+
+            <h2 class="section-headline"></h2>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/lecturer-handler2.js"></script>
+</body>
+</html>

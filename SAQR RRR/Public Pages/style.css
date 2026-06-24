@@ -1,0 +1,368 @@
+/* =======================================================
+   SAQR GLOBAL MASTER STYLESHEET
+   ======================================================= */
+
+:root {
+  --navy: #142850;
+  --navy-dark: #0e1f3d;
+  --gold: #d8b06a;
+  --gold-light: #e8cd96;
+  --card-blue: #8fa3c9;
+  --card-blue-light: #a7b9d8;
+  --text-light: #ffffff;
+  --text-muted: #c9d2e3;
+  --gray-bg: #ececec;
+  --gray-border: #d4d4d4;
+  --ink: #1c1c1c;
+  --error: #c0392b;
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+img, svg { 
+  display: block; 
+}
+
+button { 
+  font-family: inherit; 
+  cursor: pointer; 
+}
+
+/* ===== Reusable Logo Engine ===== */
+.logo { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+.logo-mark { 
+  width: 38px; 
+  height: 38px; 
+  flex-shrink: 0; 
+  object-fit: contain; 
+}
+.logo-text { 
+  font-weight: 800; 
+  font-size: 22px; 
+  color: var(--navy); 
+  letter-spacing: 1px; 
+  line-height: 1; 
+}
+.logo-sub { 
+  font-size: 7px; 
+  letter-spacing: 1.5px; 
+  color: #6b7280; 
+  display: block; 
+  margin-top: 2px; 
+}
+.logo--on-dark .logo-text { 
+  color: #fff; 
+}
+.logo--on-dark .logo-sub { 
+  color: var(--text-muted); 
+}
+
+/* ===== Shared Layout Headers ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.auth-links {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy);
+  display: flex;
+  gap: 10px;
+}
+.auth-links span { color: #bbb; }
+.auth-links a:hover { color: var(--gold); }
+
+.top-bar-minimal {
+  background: var(--navy);
+  padding: 14px 40px;
+}
+
+/* ===== Home Hero Section ===== */
+.hero {
+  background: var(--navy);
+  color: var(--text-light);
+  text-align: center;
+  padding: 50px 20px 40px;
+}
+.hero h1 { font-size: 28px; margin: 0 0 6px; font-weight: 700; line-height: 1.35; }
+.hero p.tagline { margin: 14px 0 0; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+
+/* ===== Home Feature Cards ===== */
+.features { padding: 60px 20px 40px; text-align: center; }
+.features h2 { font-size: 30px; margin: 0 0 40px; color: #111; font-weight: 800; line-height: 1.25; }
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--card-blue);
+  border-radius: 22px;
+  width: 220px;
+  padding: 26px 20px 30px;
+  color: var(--text-light);
+  box-shadow: 0 6px 14px rgba(20,40,80,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 280px;
+  text-align: left;
+}
+.feature-card h3 { color: var(--navy-dark); font-size: 16px; margin: 0; font-weight: 800; }
+.feature-card p { font-size: 12.5px; font-weight: 700; color: var(--navy); line-height: 1.5; margin: 0; flex-grow: 1; }
+
+/* ===== Home Mid-Page Brand Block ===== */
+.brand-block { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 60px 20px 50px; }
+.brand-name { text-align: left; }
+.brand-name .saqr { font-size: 46px; font-weight: 900; color: var(--navy); letter-spacing: 2px; line-height: 1; }
+.brand-name .divider { height: 2px; background: var(--gold); margin: 6px 0; width: 100%; }
+.brand-name .sub { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--navy); }
+
+/* ===== Master Unified Footer ===== */
+.site-footer { 
+  background: var(--navy); 
+  color: var(--text-light); 
+  padding: 40px 40px 18px; 
+  margin-top: 60px;
+}
+.footer-top { 
+  display: inline-flex; 
+  margin-bottom: 28px; 
+}
+.footer-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 40px; 
+  max-width: 1100px; 
+}
+.footer-col h4 { font-size: 14px; margin: 0 0 16px; font-weight: 700; color: var(--text-light); }
+.footer-col h4 a:hover { color: var(--gold); }
+.footer-col ul { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 2.2; }
+.footer-col ul li a { color: var(--text-muted); }
+.footer-col ul li a:hover { color: var(--gold-light); }
+
+.contact-item { display: flex; align-items: center; gap: 8px; font-size: 13px; margin-bottom: 8px; color: var(--text-muted); }
+.contact-item .icon { width: 14px; height: 14px; flex-shrink: 0; }
+
+.social-icons { display: flex; gap: 10px; margin-top: 10px; }
+.social-icons a { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #fff; }
+.social-icons a:hover { background: var(--gold); }
+.social-icons svg { width: 14px; height: 14px; fill: currentColor; stroke: currentColor; stroke-width: 0; }
+.social-icons a[aria-label*="Twitter"] svg, .social-icons a[aria-label*="Facebook"] svg { stroke-width: 0; }
+
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 28px 0 14px; }
+.copyright { text-align: center; font-size: 11px; color: var(--text-muted); }
+
+
+/* =======================================================
+   Auth Card Architecture (Login & Register Module)
+   ======================================================= */
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 80vh;
+}
+.auth-page > .logo { margin-bottom: 30px; }
+
+.auth-card {
+  background: var(--card-blue);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  box-shadow: 0 10px 24px rgba(20,40,80,0.2);
+}
+.auth-card.register-variant {
+  max-width: 740px;
+}
+
+.auth-card-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.auth-card h1 { font-size: 26px; font-weight: 800; color: var(--navy-dark); margin: 0 0 6px; }
+.auth-subtitle { font-size: 12px; font-weight: 600; color: #334155; margin: 0 0 24px; }
+.auth-card .lock-icon { width: 24px; height: 24px; color: var(--navy-dark); }
+
+/* Structural Dual-Column Form Grid for Registration Split view */
+.form-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.field { margin-bottom: 16px; text-align: left; }
+.field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px; }
+
+.input-wrap { position: relative; }
+.input-wrap input,
+.input-wrap select,
+textarea.input {
+  width: 100%;
+  padding: 10px 36px 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: #f8fafc;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+}
+.input-wrap.no-icon input { padding-right: 12px; }
+.input-wrap input:focus, textarea.input:focus {
+  outline: 2px solid var(--navy-dark);
+  background: #ffffff;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  display: flex;
+}
+.toggle-eye svg { width: 16px; height: 16px; }
+
+.field-error { font-size: 11px; color: var(--error); margin: 4px 0 0; display: none; }
+.field-link-row { text-align: right; margin: -10px 0 20px; }
+.field-link-row a { font-size: 12px; font-weight: 600; color: var(--navy-dark); }
+.field-link-row a:hover { text-decoration: underline; }
+
+.auth-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 24px; }
+
+.btn {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 13px;
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-primary { background: var(--navy-dark); color: #fff; }
+.btn-primary:hover { background: var(--navy); }
+.btn-secondary { background: #fff; color: var(--navy-dark); border: 1px solid rgba(0,0,0,0.1); }
+.btn-secondary:hover { background: var(--gray-bg); }
+
+.auth-switch { text-align: center; font-size: 12px; color: #334155; margin-top: 20px; }
+.auth-switch a { font-weight: 700; color: var(--navy-dark); }
+.auth-switch a:hover { text-decoration: underline; }
+
+
+/* ===== Registration Pure CSS Hover Dropdown Menu ===== */
+.custom-select-container { position: relative; width: 100%; }
+.select-trigger-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+.select-trigger-box .chevron { width: 14px; height: 14px; color: #64748b; }
+.hover-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  margin-top: 4px;
+  overflow: hidden;
+  z-index: 10;
+}
+.dropdown-item { padding: 10px 12px; font-size: 13px; color: var(--ink); cursor: pointer; }
+.dropdown-item:hover { background: var(--gray-bg); }
+.dropdown-item.active-selection { background: var(--card-blue-light); font-weight: 700; }
+.custom-select-container:hover .hover-dropdown-menu { display: block; }
+
+
+/* =======================================================
+   Contact Page Module Layout 
+   ======================================================= */
+
+.contact-page { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+.contact-panel { background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+.panel-head { background: var(--navy); color: #fff; padding: 16px 24px; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+.panel-body { padding: 30px 24px; }
+
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+.info-item { display: flex; flex-direction: column; }
+.icon-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--card-blue-light); color: var(--navy-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.icon-circle svg { width: 20px; height: 20px; }
+.info-label { font-size: 12px; font-weight: 700; color: #64748b; margin: 0 0 4px; text-transform: uppercase; }
+.info-value { font-size: 14px; font-weight: 600; color: var(--navy-dark); margin: 0; line-height: 1.4; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.required { color: var(--error); }
+textarea.input { resize: vertical; min-height: 80px; }
+
+.captcha-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.captcha-code { background: #e2e8f0; padding: 6px 16px; font-weight: 700; font-family: monospace; font-size: 16px; letter-spacing: 3px; border-radius: 4px; border: 1px dashed #cbd5e1; }
+.captcha-refresh { background: none; border: none; color: var(--navy); font-size: 12px; font-weight: 700; text-decoration: underline; }
+.captcha-hint { font-size: 11px; color: #64748b; margin: 4px 0 20px; }
+
+.btn-submit { background: var(--navy-dark); color: #fff; border: none; padding: 12px 30px; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: var(--navy); }
+.btn-submit svg { width: 16px; height: 16px; }
+
+
+/* =======================================================
+   Responsive System Overrides
+   ======================================================= */
+
+@media (max-width: 868px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-split-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 768px) {
+  .site-header { padding: 14px 20px; flex-direction: column; gap: 14px; }
+  .hero h1 { font-size: 20px; }
+  .features h2 { font-size: 24px; }
+  .feature-card { width: 100%; max-width: 340px; }
+  .brand-block { flex-direction: column; text-align: center; }
+  .brand-name { text-align: center; }
+  .info-grid, .field-row { grid-template-columns: 1fr; gap: 16px; }
+}

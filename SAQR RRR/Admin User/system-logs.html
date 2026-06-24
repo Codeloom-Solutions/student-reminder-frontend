@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Logs - SAQR Portal</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Admin</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="manage-lecturers.html"><i class="fa-solid fa-chalkboard-user"></i> <span>Manage Lecturers</span></a></li>
+                <li class="sidebar-item"><a href="manage-students.html"><i class="fa-solid fa-user-graduate"></i> <span>Manage Students</span></a></li>
+                <li class="sidebar-item"><a href="manage-subject.html"><i class="fa-solid fa-book"></i> <span>Manage Subject</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+                <li class="sidebar-item active"><a href="system-logs.html"><i class="fa-solid fa-terminal"></i> <span>System Logs</span></a></li>
+                <li class="sidebar-item"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> <span>Reports</span></a></li>
+                <li class="sidebar-item"><a href="export.html"><i class="fa-solid fa-file-export"></i> <span>Export Data</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Admin: system logs</h1>
+
+            <div class="list-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div class="data-list-wrapper">
+                <div class="logs-grid-header">
+                    <div>Timestamp</div>
+                    <div>Log Level</div>
+                    <div>Event Message / Details</div>
+                </div>
+                
+                <div id="system-logs-stream-target">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+<script src="../assets/js/system-logs.js"></script>
+</body>
+</html>

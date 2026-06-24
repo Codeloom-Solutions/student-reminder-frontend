@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Task - SAQR Portal</title>
+    <link rel="stylesheet" href="lecturer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Lecturer</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="create-task.html"><i class="fa-solid fa-pen-to-square"></i> <span>Create Task</span></a></li>
+                <li class="sidebar-item active"><a href="manage-task.html"><i class="fa-solid fa-list-check"></i> <span>Manage Task</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Lecturer: manage task</h1>
+
+            <div class="list-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div class="data-list-wrapper">
+                <div class="data-list-header">
+                    <div>Task name</div>
+                    <div>Type</div>
+                    <div>Subject ID</div>
+                    <div>Due Date</div>
+                    <div>Action</div>
+                </div>
+                
+                <div id="tasks-list-target">
+                    </div>
+            </div>
+
+            <div class="float-right-container">
+                <a href="create-task.html" class="btn-add-action">+ Create task</a>
+            </div>
+        </main>
+    </div>
+
+
+    <style>
+        /* Container framework wrapper */
+.data-list-wrapper {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* THE FIX: Shared master column distribution matrix */
+.data-list-header, 
+.data-list-row {
+    display: grid;
+    /* Adjust these proportions to match your visual taste (e.g., 2 parts title, 1 part type...) */
+    grid-template-columns: 2.5fr 1.2fr 1fr 1.8fr 1fr; 
+    align-items: center;
+    padding: 14px 20px;
+}
+
+/* Header style modifications */
+.data-list-header {
+    background-color: #dcdcdc; /* Matches the gray container shade in your layout */
+    color: #041E42;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #b8c2cc;
+}
+
+/* Dynamic grid database rows styling */
+.data-list-row {
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.875rem;
+    color: #334155;
+    background: #ffffff;
+    transition: background-color 0.15s ease;
+}
+
+.data-list-row:last-child {
+    border-bottom: none;
+}
+
+.data-list-row:hover {
+    background-color: #f8fafc;
+}
+
+/* Micro-alignment rules for perfect vertical balancing underneath headers */
+.data-list-header > div,
+.data-list-row > div {
+    text-align: left; /* Left align text content uniformly */
+    display: flex;
+    align-items: center;
+}
+
+/* Optional: Center align the "Action" column at the far right */
+.data-list-header > div:last-child,
+.data-list-row > div:last-child {
+    justify-content: flex-start;
+}
+
+    </style>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/lecturer-handler2.js"></script>
+</body>
+</html>

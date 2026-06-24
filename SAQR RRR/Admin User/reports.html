@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - SAQR Portal</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Admin</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="manage-lecturers.html"><i class="fa-solid fa-chalkboard-user"></i> <span>Manage Lecturers</span></a></li>
+                <li class="sidebar-item"><a href="manage-students.html"><i class="fa-solid fa-user-graduate"></i> <span>Manage Students</span></a></li>
+                <li class="sidebar-item"><a href="manage-subject.html"><i class="fa-solid fa-book"></i> <span>Manage Subject</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+                <li class="sidebar-item"><a href="system-logs.html"><i class="fa-solid fa-terminal"></i> <span>System Logs</span></a></li>
+                <li class="sidebar-item active"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> <span>Reports</span></a></li>
+                <li class="sidebar-item"><a href="export.html"><i class="fa-solid fa-file-export"></i> <span>Export Data</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Admin: System Reports</h1>
+
+            <div class="report-action-toolbar">
+                <div class="report-filter-group">
+                    <label class="form-label-text" style="margin: 0;">Scope:</label>
+                    <select class="input-element" style="width: 180px; padding: 6px 12px;">
+                        <option>All Academic Data</option>
+                        <option>Lecturer Performance</option>
+                        <option>Student Enrollments</option>
+                    </select>
+                </div>
+                <a href="export.html" class="capsule-btn-dark" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-file-export"></i> Export Dataset
+                </a>
+            </div>
+
+           
+
+                <div class="pane-container">
+                    <h3>Quick Overview Distribution</h3>
+                    <div style="text-align: center; padding: 40px 0; color: #666;">
+                        <i class="fa-solid fa-chart-pie fa-4x" style="color: var(--accent-slate); margin-bottom: 15px; display: block;"></i>
+                        <span>Visual charts loop container active.</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+<script src="../assets/js/metrics-handler.js"></script>
+<script src="../assets/js/export-engine.js"></script>
+<script src="../assets/js/admin-handler3.js"></script>
+
+</body>
+</html>

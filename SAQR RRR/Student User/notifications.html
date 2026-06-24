@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - SAQR Portal</title>
+    <link rel="stylesheet" href="student-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Student</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="tasks.html"><i class="fa-solid fa-briefcase"></i> <span>Tasks</span></a></li>
+                <li class="sidebar-item"><a href="courses.html"><i class="fa-solid fa-book-open"></i> <span>Subjects</span></a></li>
+                <li class="sidebar-item active"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Logout</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Student Notifications</h1>
+
+            <div class="notification-box">
+                <div class="box-title-bar">
+                    <h2>Notifications</h2>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="feed-stack" id="notifications-feed-container">
+                    </div>
+
+                <div class="setting-panel">
+                    <div class="toggle-card">
+                        <span>Notification type</span>
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="toggle-card">
+                        <span>Email notification</span>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-email">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-card">
+                        <span>Sms notification</span>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-sms">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/page-actions.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Notifications - SAQR Portal</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Admin</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="manage-lecturers.html"><i class="fa-solid fa-chalkboard-user"></i> <span>Manage Lecturers</span></a></li>
+                <li class="sidebar-item"><a href="manage-students.html"><i class="fa-solid fa-user-graduate"></i> <span>Manage Students</span></a></li>
+                <li class="sidebar-item"><a href="manage-subject.html"><i class="fa-solid fa-book"></i> <span>Manage Subject</span></a></li>
+                <li class="sidebar-item active"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+                <li class="sidebar-item"><a href="system-logs.html"><i class="fa-solid fa-terminal"></i> <span>System Logs</span></a></li>
+                <li class="sidebar-item"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> <span>Reports</span></a></li>
+                <li class="sidebar-item"><a href="export.html"><i class="fa-solid fa-file-export"></i> <span>Export Data</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Admin Notifications</h1>
+
+            <div class="profile-card-base" style="max-width: 700px; background-color: var(--white); border: 1px solid #ccc;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h2 style="font-size: 1.6rem;">Notifications</h2>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div id="global-notifications-stack-target" style="margin-bottom: 25px;">
+                    </div>
+
+                <div class="form-group-stack" style="background-color: var(--system-gray); padding: 20px; border-radius: 12px;">
+                    <div class="toggle-setting-card">
+                        <span>Notification type</span>
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="toggle-setting-card">
+                        <span>Email notification</span>
+                        <label class="switch"><input type="checkbox" name="admin-email-toggle"><span class="slider"></span></label>
+                    </div>
+                    <div class="toggle-setting-card">
+                        <span>Sms notification</span>
+                        <label class="switch"><input type="checkbox" name="admin-sms-toggle"><span class="slider"></span></label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/page-actions.js"></script>
+</body>
+</html>

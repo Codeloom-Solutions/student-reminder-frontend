@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - SAQR Portal</title>
+    <link rel="stylesheet" href="student-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Student</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="tasks.html"><i class="fa-solid fa-briefcase"></i> <span>Tasks</span></a></li>
+                <li class="sidebar-item"><a href="courses.html"><i class="fa-solid fa-book-open"></i> <span>Subjects</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item active"><a href="profile.html"><i class="fa-solid fa-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Logout</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Profile settings</h1>
+
+            <div class="card-wrapper">
+                <div class="identity-header">
+                    <div class="identity-avatar"><i class="fa-solid fa-circle-user"></i></div>
+                    <div class="identity-meta">
+                        <h2 id="profile-username-tag"></h2>
+                        <p>role : Student</p>
+                        <p>student number: <span id="profile-id-tag"></span></p>
+                    </div>
+                    <a href="settings.html" style="margin-left: auto; color: inherit;"><i class="fa-solid fa-gear fa-lg"></i></a>
+                </div>
+
+                <form class="form-body">
+                    <div class="input-block">
+                        <label>Full name</label>
+                        <input type="text" class="form-control" name="fullname" value="">
+                    </div>
+                    <div class="input-block">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" value="">
+                    </div>
+                    <div class="input-block">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" name="phone" value="">
+                    </div>
+                    <div class="input-block">
+                        <label>Password</label>
+                        <div class="field-container">
+                            <input type="password" class="form-control" name="password" value="">
+                            <button type="button" class="toggle-pwd"><i class="fa-regular fa-eye-slash"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-block">
+                        <label>Confirm Password</label>
+                        <div class="field-container">
+                            <input type="password" class="form-control" name="confirm-password" value="">
+                            <button type="button" class="toggle-pwd"><i class="fa-regular fa-eye-slash"></i></button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="capsule-btn">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/profile-handler.js"></script>
+    <script src="../assets/js/public-actions.js"></script>
+</body>
+</html>

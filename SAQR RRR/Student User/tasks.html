@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Tasks - SAQR Portal</title>
+    <link rel="stylesheet" href="student-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Student</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item active"><a href="tasks.html"><i class="fa-solid fa-briefcase"></i> <span>Tasks</span></a></li>
+                <li class="sidebar-item"><a href="courses.html"><i class="fa-solid fa-book-open"></i> <span>Subjects</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Logout</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Student Tasks:</h1>
+
+            <div class="filter-bar">
+                <span>All Tasks:</span>
+                <div class="filter-group">
+                    <label>Filter By:</label>
+                    <select class="filter-select">
+                        <option>Due Date</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort:</label>
+                    <select class="filter-select">
+                        <option>A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Task name</th>
+                            <th>Subject</th>
+                            <th>Due Date & Time</th>
+                            <th>Priority</th>
+                            <th>Status:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+<script src="../assets/js/student-handler.js"></script>
+</body>
+</html>

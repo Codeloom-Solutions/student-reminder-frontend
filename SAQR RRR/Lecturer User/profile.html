@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Profile - SAQR Portal</title>
+    <link rel="stylesheet" href="lecturer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Lecturer</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="create-task.html"><i class="fa-solid fa-pen-to-square"></i> <span>Create Task</span></a></li>
+                <li class="sidebar-item"><a href="manage-task.html"><i class="fa-solid fa-list-check"></i> <span>Manage Task</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item active"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Profile settings</h1>
+
+            <div class="profile-card-base">
+                <div class="profile-identity-header">
+                    <i class="fa-solid fa-circle-user fa-3x"></i>
+                    <div class="profile-meta-details">
+                        <h2 id="lecturer-name-title"></h2>
+                        <p>Role: Lecturer</p>
+                    </div>
+                    <a href="settings.html" style="margin-left: auto; color: inherit;"><i class="fa-solid fa-gear fa-xl"></i></a>
+                </div>
+
+                <form class="profile-form-body" method="POST" action="">
+                    <div class="profile-input-block">
+                        <label>Full name</label>
+                        <input type="text" class="profile-control-input" name="fullname">
+                    </div>
+                    <div class="profile-input-block">
+                        <label>Email</label>
+                        <input type="email" class="profile-control-input" name="email">
+                    </div>
+                    <div class="profile-input-block">
+                        <label>Phone</label>
+                        <input type="text" class="profile-control-input" name="phone">
+                    </div>
+                    <div class="profile-input-block" style="position:relative;">
+                        <label>Password</label>
+                        <input type="password" class="profile-control-input" name="password">
+                        <i class="fa-regular fa-eye-slash" style="position:absolute; right:15px; bottom:14px; cursor:pointer; color:#666;"></i>
+                    </div>
+                    <div class="profile-input-block" style="position:relative;">
+                        <label>Confirm Password</label>
+                        <input type="password" class="profile-control-input" name="confirm-password">
+                        <i class="fa-regular fa-eye-slash" style="position:absolute; right:15px; bottom:14px; cursor:pointer; color:#666;"></i>
+                    </div>
+
+                    <button type="submit" class="capsule-btn-dark" style="align-self: center; margin-top:10px;">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/profile-handler.js"></script>
+</body>
+</html>

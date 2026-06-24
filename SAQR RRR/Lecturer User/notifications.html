@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Notifications - SAQR Portal</title>
+    <link rel="stylesheet" href="lecturer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Lecturer</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="create-task.html"><i class="fa-solid fa-pen-to-square"></i> <span>Create Task</span></a></li>
+                <li class="sidebar-item"><a href="manage-task.html"><i class="fa-solid fa-list-check"></i> <span>Manage Task</span></a></li>
+                <li class="sidebar-item active"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item"><a href="profile.html"><i class="fa-solid fa-user-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Log out</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Lecturer Notifications</h1>
+
+            <div class="profile-card-base" style="max-width: 700px; background-color: var(--white); border: 1px solid #ccc;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h2 style="font-size: 1.6rem;">Notifications</h2>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div id="notifications-stack-container" style="margin-bottom: 25px;">
+                    </div>
+
+                <div class="form-group-stack" style="background-color: var(--system-gray); padding: 20px; border-radius: 12px;">
+                    <div class="toggle-setting-card">
+                        <span>Notification type</span>
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="toggle-setting-card">
+                        <span>Email notification</span>
+                        <label class="switch"><input type="checkbox" name="notif-email"><span class="slider"></span></label>
+                    </div>
+                    <div class="toggle-setting-card">
+                        <span>Sms notification</span>
+                        <label class="switch"><input type="checkbox" name="notif-sms"><span class="slider"></span></label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/lecturer-handler2.js"></script>
+    <script src="../assets/js/page-actions.js"></script>
+</body>
+</html>

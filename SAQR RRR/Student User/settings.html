@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Settings - SAQR Portal</title>
+    <link rel="stylesheet" href="student-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo-area"><img src="../assets/images/logo.webp" alt="SAQR Logo"></div>
+        <div class="top-nav-controls">
+            <button class="nav-icon"><i class="fa-regular fa-bell"></i></button>
+            <div class="profile-trigger"><i class="fa-regular fa-circle-user fa-xl"></i> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="user-tag">
+                <i class="fa-solid fa-user-large"></i>
+                <div class="user-tag-info"><h4>user:</h4><p>Student</p></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a></li>
+                <li class="sidebar-item"><a href="tasks.html"><i class="fa-solid fa-briefcase"></i> <span>Tasks</span></a></li>
+                <li class="sidebar-item"><a href="courses.html"><i class="fa-solid fa-book-open"></i> <span>Subjects</span></a></li>
+                <li class="sidebar-item"><a href="notifications.html"><i class="fa-solid fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="sidebar-item active"><a href="profile.html"><i class="fa-solid fa-gear"></i> <span>Profile</span></a></li>
+                <div class="sidebar-item"><a href="../Public Pages/index.html"><i class="fa-solid fa-door-open"></i> <span>Logout</span></a></li>
+            </div>
+        </nav>
+
+        <main class="workspace">
+            <h1 class="page-title">Settings</h1>
+
+            <div class="card-wrapper" style="max-width: 700px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                    <h2 style="font-weight: bold; font-size: 1.5rem;">STUDENT SETTINGS</h2>
+                    <h2 style="font-weight: bold; font-size: 1.5rem;">System Configuration</h2>
+                </div>
+
+                <div class="form-body" style="background-color: #90a4be;">
+                    <div class="input-block form-row-split">
+                        <label style="align-self: center;">System name</label>
+                        <input type="text" class="form-control" name="system-name" value="">
+                    </div>
+                    <div class="input-block form-row-split">
+                        <label style="align-self: center;">Default time zone</label>
+                        <input type="text" class="form-control" name="timezone" value="">
+                    </div>
+                    <div class="input-block form-row-split">
+                        <label style="align-self: center;">Student</label>
+                        <input type="text" class="form-control" name="student-reference-id" value="">
+                    </div>
+
+                    <h3 class="setting-section-title">Notifications</h3>
+                    
+                    <div class="toggle-card">
+                        <span>Assignment alerts</span>
+                        <label class="switch"><input type="checkbox" name="alert-assign"><span class="slider"></span></label>
+                    </div>
+                    <div class="toggle-card">
+                        <span>Email</span>
+                        <label class="switch"><input type="checkbox" name="alert-email"><span class="slider"></span></label>
+                    </div>
+                    <div class="toggle-card">
+                        <span>SMS</span>
+                        <label class="switch"><input type="checkbox" name="alert-sms"><span class="slider"></span></label>
+                    </div>
+
+                    <h3 class="setting-section-title">Security</h3>
+
+                    <div class="toggle-card">
+                        <span>Two factor security</span>
+                        <label class="switch"><input type="checkbox" name="alert-2fa"><span class="slider"></span></label>
+                    </div>
+
+                    <a href="change-password.html" class="toggle-card" style="text-decoration: none; color: inherit;">
+                        <span>Change password</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/core-services.js"></script>
+    <script src="../assets/js/page-actions.js"></script>
+</body>
+</html>
