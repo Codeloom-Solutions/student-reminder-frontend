@@ -25,11 +25,13 @@ vercel.json
 So Vercel can serve the app from the root and route:
 
 ```text
-/          -> Public Pages/index.html
-/login     -> Public Pages/login.html
-/register  -> Public Pages/register.html
-/contact   -> Public Pages/contact.html
+/          -> Public-Pages/index.html
+/login     -> Public-Pages/login.html
+/register  -> Public-Pages/register.html
+/contact   -> Public-Pages/contact.html
 ```
+
+These routes use redirects, not rewrites. That is important because the HTML files use relative CSS paths such as `style.css`; a rewrite can make Vercel show unstyled HTML by keeping the browser URL at `/`.
 
 ## Important Backend Note
 

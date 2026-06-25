@@ -1,10 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/Public-Pages/index.html" },
-    { "source": "/login", "destination": "/Public-Pages/login.html" },
-    { "source": "/register", "destination": "/Public-Pages/register.html" },
-    { "source": "/contact", "destination": "/Public-Pages/contact.html" }
+  "redirects": [
+    { "source": "/", "destination": "/Public-Pages/index.html", "permanent": false },
+    { "source": "/login", "destination": "/Public-Pages/login.html", "permanent": false },
+    { "source": "/register", "destination": "/Public-Pages/register.html", "permanent": false },
+    { "source": "/contact", "destination": "/Public-Pages/contact.html", "permanent": false }
   ]
 }

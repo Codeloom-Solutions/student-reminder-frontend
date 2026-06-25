@@ -128,7 +128,7 @@ class AuthService {
 
     static logout() {
         localStorage.removeItem("saqr_session");
-        window.location.href = "../Public Pages/login.html";
+        window.location.href = "../Public-Pages/login.html";
     }
 }
 
